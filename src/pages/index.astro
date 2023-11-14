@@ -10,54 +10,19 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 	{
-		title: "Astro",
-		desc: "Build fast websites, faster.",
+		title: "暂时",
+		desc: "暂时放在这里，不知道后面会有啥项目，先占个位",
 		href: "https://astro.build",
-	},
-	{
-		title: "Astro Assets",
-		desc: "Built-in optimized asset support.",
-		href: "https://docs.astro.build/en/guides/assets/",
-	},
-	{
-		title: "Tailwind CSS",
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
-		href: "https://tailwindcss.com",
-	},
-	{
-		title: "Markdown",
-		desc: "Simple and easy-to-use markup language.",
-		href: "https://www.markdownguide.org/",
-	},
-	{
-		title: "MDX",
-		desc: "Markdown for the component era.",
-		href: "https://mdxjs.com/",
-	},
-	{
-		title: "Satori",
-		desc: "Generating png Open Graph images for blog posts.",
-		href: "https://github.com/vercel/satori",
-	},
-	{
-		title: "Pagefind",
-		desc: "A fully static search library.",
-		href: "https://pagefind.app/",
-	},
-	{
-		title: "Astro Icon",
-		desc: "An easy to use Icon component for Astro.",
-		href: "https://github.com/natemoo-re/astro-icon#readme",
 	},
 ];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<h1 class="title mb-6">Hello 👋!</h1>
-		<p class="mb-4">
-			<!--Hi, I'm AqingCyan, currently a business development engineer. This is my personal blog, where I mainly record some tech-related content. If you're interested in what I write, or want to get in touch with me, you can contact me through the platforms listed below.-->
-      Hi, 我是 AqingCyan，目前是一个业务开发工程师。这里是我的个人博客，主要记录一些技术相关的内容。如果你对我的内容感兴趣，或是想跟我联系，可以通过下面的方式找到我。
+		<h1 class="title mb-6">你好 👋</h1>
+		<p class="mb-4 leading-6">
+			嗨，我是
+			AqingCyan，一名程序员，目前从事在线教育相关的业务开发。这里是我的个人博客，主要记录我的生活总结与一些技术相关的内容。如果你对我的内容感兴趣，或是想跟我联系，可以通过下面的方式找到我。
 		</p>
 		<SocialList />
 	</section>
@@ -74,7 +39,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 		</ul>
 	</section>
 	<section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
+		<h2 class="title mb-4 text-xl">Projects</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				cactusTech.map(({ href, title, desc }) => (
@@ -86,8 +51,8 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 							class="cactus-link inline-block"
 						>
 							{title}
-						</a>:
-						<p class="inline-block sm:mt-2">{desc}</p>
+						</a>
+						:<p class="inline-block sm:mt-2">{desc}</p>
 					</li>
 				))
 			}
